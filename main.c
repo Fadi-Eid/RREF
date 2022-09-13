@@ -8,10 +8,10 @@
 //of equation in the system.
 //computing the RREF of a matrix can be inefficient due to the rounding of computer errors
 //thus, this algorithm can be used efficiently for medium sized matrices and for an approximated result.
-void RREF(float** Mat, int M, int N)
+void RREF(double** Mat, int M, int N)
 {
     int i, j, k, l;
-    float pivot, factor;
+    double pivot, factor;
     int above=0;
     int below=0;
     //pivots are the diagonal elements:
@@ -62,7 +62,7 @@ void RREF(float** Mat, int M, int N)
         }
     }
     //diagonal must be units ( = 1 )
-    float unit;
+    double unit;
     if(M<=N)
     {
         for(i=0; i<M; i++)
@@ -80,20 +80,20 @@ int main()
 {
     int M, N;
     int i, j;
-    float **Mat;
+    double **Mat;
     printf("Rows: ");
     scanf("%d", &M);
     printf("Columns: ");
     scanf("%d", &N);
     //allocation:
-    Mat = (float**)malloc(M*sizeof(float*));
+    Mat = (double**)malloc(M*sizeof(double*));
     for(i=0; i<M; i++)
-        Mat[i] = (float*)malloc(N*sizeof(float));
+        Mat[i] = (double*)malloc(N*sizeof(double));
     for(i=0; i<M; i++)
         for(j=0; j<N; j++)
         {
             printf("A[%d][%d] = ", i, j);
-            scanf("%f", &Mat[i][j]);
+            scanf("%lf", &Mat[i][j]);
         }
     RREF(Mat, M, N);
     printf("\n\n__________________________________\n");
@@ -101,7 +101,7 @@ int main()
     {
         for(j=0; j<N; j++)
         {
-            printf("%g\t", Mat[i][j]);
+            printf("%.3lf\t", Mat[i][j]);
         }
         if(i!=M)
         printf("|\n");
