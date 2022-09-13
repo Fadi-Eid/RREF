@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1663094434 source:c:\users\fadi\desktop\rref\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
