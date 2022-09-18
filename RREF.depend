@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1663097513 source:c:\users\fadi\desktop\rref\main.c
+1663496442 source:c:\users\fadi\desktop\rref\main.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
+	<conio.h>
 
